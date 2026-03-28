@@ -17,10 +17,10 @@ jobs:
       matrix:
         go-version: ["1.22", "1.23", "1.24"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Checkout go-client (local replace dependency)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: torrentclaw/go-client
           path: ../go-client
@@ -41,10 +41,10 @@ jobs:
         goos: [linux, darwin, windows]
         goarch: [amd64, arm64]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Checkout go-client (local replace dependency)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: torrentclaw/go-client
           path: ../go-client
@@ -64,10 +64,10 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Checkout go-client (local replace dependency)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: torrentclaw/go-client
           path: ../go-client
@@ -86,10 +86,10 @@ jobs:
     name: Coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Checkout go-client (local replace dependency)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: torrentclaw/go-client
           path: ../go-client
@@ -114,10 +114,10 @@ jobs:
     name: Vet
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Checkout go-client (local replace dependency)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: torrentclaw/go-client
           path: ../go-client
