@@ -21,7 +21,7 @@ jobs:
         run: git clone --depth 1 https://github.com/torrentclaw/go-client "$GITHUB_WORKSPACE/../go-client"
 
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: "1.24"
 
