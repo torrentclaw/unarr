@@ -1,24 +1,24 @@
 # ---- Build stage ----
 # Build context must be the parent directory containing both torrentclaw-cli/
-# and torrentclaw-go-client/. Use: docker build -f torrentclaw-cli/Dockerfile .
+# and go-client/. Use: docker build -f torrentclaw-cli/Dockerfile .
 # Or use the provided docker-build.sh script.
 FROM golang:1.24-alpine AS builder
 
 RUN apk add --no-cache git ca-certificates
 
-# Copy go-client dependency (local replace in go.mod -> ../torrentclaw-go-client)
+# Copy go-client dependency (local replace in go.mod -> ../go-client)
 WORKDIR /deps
-COPY torrentclaw-go-client/ /deps/torrentclaw-go-client/
+COPY go-client/ /deps/go-client/
 
 # Copy go.mod/go.sum first for layer caching
 WORKDIR /src
 COPY torrentclaw-cli/go.mod torrentclaw-cli/go.sum ./
-RUN go mod edit -replace github.com/torrentclaw/torrentclaw-go-client=/deps/torrentclaw-go-client
+RUN go mod edit -replace github.com/torrentclaw/go-client=/deps/go-client
 RUN go mod download
 
 # Copy source (changes here won't invalidate mod cache)
 COPY torrentclaw-cli/ .
-RUN go mod edit -replace github.com/torrentclaw/torrentclaw-go-client=/deps/torrentclaw-go-client
+RUN go mod edit -replace github.com/torrentclaw/go-client=/deps/go-client
 
 RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /unarr ./cmd/unarr/
 

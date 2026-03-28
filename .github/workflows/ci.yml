@@ -22,8 +22,8 @@ jobs:
       - name: Checkout go-client (local replace dependency)
         uses: actions/checkout@v4
         with:
-          repository: torrentclaw/torrentclaw-go-client
-          path: ../torrentclaw-go-client
+          repository: torrentclaw/go-client
+          path: ../go-client
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -46,8 +46,8 @@ jobs:
       - name: Checkout go-client (local replace dependency)
         uses: actions/checkout@v4
         with:
-          repository: torrentclaw/torrentclaw-go-client
-          path: ../torrentclaw-go-client
+          repository: torrentclaw/go-client
+          path: ../go-client
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -69,8 +69,8 @@ jobs:
       - name: Checkout go-client (local replace dependency)
         uses: actions/checkout@v4
         with:
-          repository: torrentclaw/torrentclaw-go-client
-          path: ../torrentclaw-go-client
+          repository: torrentclaw/go-client
+          path: ../go-client
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -91,8 +91,8 @@ jobs:
       - name: Checkout go-client (local replace dependency)
         uses: actions/checkout@v4
         with:
-          repository: torrentclaw/torrentclaw-go-client
-          path: ../torrentclaw-go-client
+          repository: torrentclaw/go-client
+          path: ../go-client
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -119,8 +119,8 @@ jobs:
       - name: Checkout go-client (local replace dependency)
         uses: actions/checkout@v4
         with:
-          repository: torrentclaw/torrentclaw-go-client
-          path: ../torrentclaw-go-client
+          repository: torrentclaw/go-client
+          path: ../go-client
 
       - name: Set up Go
         uses: actions/setup-go@v5

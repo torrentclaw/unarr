@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	tc "github.com/torrentclaw/torrentclaw-go-client"
+	tc "github.com/torrentclaw/go-client"
 
 	"github.com/torrentclaw/torrentclaw-cli/internal/parser"
 	"github.com/torrentclaw/torrentclaw-cli/internal/ui"

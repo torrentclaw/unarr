@@ -4,7 +4,7 @@
 **Lenguaje:** Go
 **Proyecto:** ~/Proyectos/torrentclaw/torrentclaw-cli
 **Módulo Go:** `github.com/torrentclaw/torrentclaw-cli`
-**Depende de:** `github.com/torrentclaw/torrentclaw-go-client`
+**Depende de:** `github.com/torrentclaw/go-client`
 **Binario:** `unarr` (alias: `un`)
 **Licencia:** MIT
 **Organización GitHub:** torrentclaw
@@ -425,7 +425,7 @@ torrentclaw-cli/
 
 ```
 GitHub: torrentclaw/
-├── torrentclaw-go-client   ← Librería Go compartida (API client + types) — MIT
+├── go-client   ← Librería Go compartida (API client + types) — MIT
 ├── unarr (torrentclaw-cli)  ← CLI terminal (Go, importa go-client) — MIT
 ├── torrentclaw-mcp          ← MCP server (TypeScript) — ya existe
 ├── torrentclaw-skill        ← Skill para agentes — ya existe
@@ -435,11 +435,11 @@ GitHub: buryni/
 └── torrent-aggregator       ← Web app (privado)
 ```
 
-### torrentclaw-go-client (Librería compartida)
+### go-client (Librería compartida)
 
 ```
-torrentclaw-go-client/
-├── go.mod                   ← module github.com/torrentclaw/torrentclaw-go-client
+go-client/
+├── go.mod                   ← module github.com/torrentclaw/go-client
 ├── client.go                ← NewClient, config, HTTP base, retry, rate limiting
 ├── search.go                ← Search, Autocomplete
 ├── content.go               ← Popular, Recent, WatchProviders, Credits
@@ -452,7 +452,7 @@ torrentclaw-go-client/
 
 **Uso:**
 ```go
-import tc "github.com/torrentclaw/torrentclaw-go-client"
+import tc "github.com/torrentclaw/go-client"
 
 client := tc.NewClient("https://torrentclaw.com", "tc_apikey...")
 results, _ := client.Search(tc.SearchParams{Query: "breaking bad", Quality: "1080p"})

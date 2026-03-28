@@ -8,7 +8,7 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/olekukonko/tablewriter"
-	tc "github.com/torrentclaw/torrentclaw-go-client"
+	tc "github.com/torrentclaw/go-client"
 )
 
 var (

@@ -6,7 +6,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PARENT_DIR="$(dirname "$SCRIPT_DIR")"
 
-# Build from parent dir so both torrentclaw-cli/ and torrentclaw-go-client/ are in context
+# Build from parent dir so both torrentclaw-cli/ and go-client/ are in context
 docker build \
     -f "$SCRIPT_DIR/Dockerfile" \
     -t torrentclaw/unarr:latest \

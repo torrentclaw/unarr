@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	tc "github.com/torrentclaw/torrentclaw-go-client"
+	tc "github.com/torrentclaw/go-client"
 )
 
 // DebridDownloader downloads via debrid services (Real-Debrid, AllDebrid, etc.).

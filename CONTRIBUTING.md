@@ -14,7 +14,7 @@ Thank you for your interest in contributing! This guide will help you get starte
    ```bash
    # Clone the go-client next to the CLI
    cd ..
-   git clone https://github.com/torrentclaw/torrentclaw-go-client.git
+   git clone https://github.com/torrentclaw/go-client.git
    cd torrentclaw-cli
    ```
 4. **Create a branch** for your change:

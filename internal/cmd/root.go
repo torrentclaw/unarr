@@ -7,7 +7,7 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"github.com/torrentclaw/torrentclaw-cli/internal/config"
-	tc "github.com/torrentclaw/torrentclaw-go-client"
+	tc "github.com/torrentclaw/go-client"
 )
 
 var (
