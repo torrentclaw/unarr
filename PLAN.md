@@ -2,8 +2,8 @@
 
 **Fecha:** 14 Feb 2026
 **Lenguaje:** Go
-**Proyecto:** ~/Proyectos/torrentclaw/torrentclaw-cli
-**Módulo Go:** `github.com/torrentclaw/torrentclaw-cli`
+**Proyecto:** ~/Proyectos/torrentclaw/unarr
+**Módulo Go:** `github.com/torrentclaw/unarr`
 **Depende de:** `github.com/torrentclaw/go-client`
 **Binario:** `unarr` (alias: `un`)
 **Licencia:** MIT
@@ -332,7 +332,7 @@ Abre contenido en torrentclaw.com en el navegador.
 ## Arquitectura
 
 ```
-torrentclaw-cli/
+unarr/
 ├── cmd/
 │   └── unarr/
 │       └── main.go           ← Entry point
@@ -426,7 +426,7 @@ torrentclaw-cli/
 ```
 GitHub: torrentclaw/
 ├── go-client   ← Librería Go compartida (API client + types) — MIT
-├── unarr (torrentclaw-cli)  ← CLI terminal (Go, importa go-client) — MIT
+├── unarr (unarr)  ← CLI terminal (Go, importa go-client) — MIT
 ├── torrentclaw-mcp          ← MCP server (TypeScript) — ya existe
 ├── torrentclaw-skill        ← Skill para agentes — ya existe
 └── truespec                 ← Verificador specs (Go, migrará a go-client) — ya existe
@@ -459,7 +459,7 @@ results, _ := client.Search(tc.SearchParams{Query: "breaking bad", Quality: "108
 ```
 
 **Consumidores:**
-- unarr / torrentclaw-cli (este proyecto)
+- unarr / unarr (este proyecto)
 - truespec (migrar del HTTP client propio)
 - Cualquier herramienta Go de terceros
 
@@ -467,7 +467,7 @@ results, _ := client.Search(tc.SearchParams{Query: "breaking bad", Quality: "108
 
 - **Binarios precompilados:** GitHub Releases (linux/mac/windows amd64+arm64)
 - **Homebrew tap:** `brew install torrentclaw/tap/unarr`
-- **Go install:** `go install github.com/torrentclaw/torrentclaw-cli@latest`
+- **Go install:** `go install github.com/torrentclaw/unarr@latest`
 - **Alias:** `un` (alias integrado en el binario)
 - **README con GIFs animados** mostrando el CLI en acción
 - **Goreleaser** para automatizar builds y releases
