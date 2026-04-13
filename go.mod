@@ -9,7 +9,7 @@ require (
 	github.com/anacrolix/torrent v1.61.0
 	github.com/charmbracelet/huh v1.0.0
 	github.com/fatih/color v1.19.0
-	github.com/getsentry/sentry-go v0.44.1
+	github.com/getsentry/sentry-go v0.45.1
 	github.com/google/uuid v1.6.0
 	github.com/huin/goupnp v1.3.0
 	github.com/olekukonko/tablewriter v1.1.4
